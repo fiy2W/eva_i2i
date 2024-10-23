@@ -1,0 +1,40 @@
+pretrain_clip:
+  epochs: 50
+  batch_size: 10
+  repeat_sample: 10
+  repeat_slice: 1
+  save_freq: 1000
+  view_freq: 100
+  weight_decay: 0.05
+  lr: 0.0001
+  min_lr: 0
+  seed: 0
+  num_workers: 2
+
+  clip_num: 60
+
+  ckpt: 'ckpt/eva/pretrain_clip'
+  vis: 'vis/eva/pretrain_clip'
+
+pretrain_eva:
+  epochs: 50
+  batch_size: 4
+  repeat_sample: 4
+  repeat_slice: 1
+  save_freq: 1000
+  view_freq: 100
+  weight_decay: 0.05
+  lr: 0.0001
+  min_lr: 0
+  seed: 0
+  num_workers: 2
+
+  lambda_rec: 10
+  lambda_per: 0.1
+  lambda_clip: 0.1
+  lambda_content: 1
+  lambda_adv: 5
+  dec_num: 6
+
+  ckpt: 'ckpt/eva/pretrain_eva'
+  vis: 'vis/eva/pretrain_eva'

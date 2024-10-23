@@ -1,0 +1,49 @@
+Modality:
+  CT: computed tomography
+  CBCT: cone beam computed tomography 
+  MRI: magnetic resonance imaging
+  MR: magnetic resonance imaging
+
+Sequence:
+  DCE: dynamic contrast-enhanced
+
+ScanningSequence:
+  SE: spin echo
+  IR: inversion recovery
+  GR: gradient recalled
+  EP: echo planar
+  RM: research mode
+
+SequenceVariant:
+  SK: segmented k-space
+  MTC: magnetization transfer contrast
+  SS: steady state
+  TRSS: time reversed steady state
+  SP: spoiled
+  MP: MAG prepared
+  OSP: oversampling phase
+
+ScanOptions:
+  PER: phase encode reordering
+  RG: respiratory gating
+  CG: cardiac gating
+  PPG: peripheral pulse gating
+  FC: flow compensation
+  PFF: partial fourier - frequency
+  PFP: partial fourier - phase
+  SP: spatial presaturation
+  FS: fat saturation
+  IR: inversion recovery
+  FAST_GEMS: fast scanning on GE Healthcare's general electric medical systems
+  SAT_GEMS: saturation scanning on GE Healthcare's general electric medical systems
+  NPW: GE magnetic resonance imaging no phase wrap imaging
+  TRF_GEMS: time-resolved fluorescence on GE Healthcare's general electric medical systems
+  VRG_GEMS: VRG on GE Healthcare's general electric medical systems
+  ACC_GEMS: automatic contouring and calculation on GE Healthcare's general electric medical systems
+  MP_GEMS: multi-planar on GE Healthcare's general electric medical systems
+  EDR_GEMS: extended dynamic range on GE Healthcare's general electric medical systems
+  FILTERED_GEMS: filtering scanning on GE Healthcare's general electric medical systems
+  PROP_GEMS: PROP on GE Healthcare's general electric medical systems
+  SFS: superior frontal sulcus
+  SAT1: SAT1
+  SAT2: SAT2

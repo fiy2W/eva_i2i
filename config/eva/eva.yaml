@@ -1,0 +1,49 @@
+# StyleEncoder
+style_encoder:
+  c_in: 1                         # input channels
+  c_enc: [96, 96, 192, 384, 768]  # channels for encoder
+  k_enc: [ 7,  4,   2,   2,   2]  # ksize for encoder
+  s_enc: [ 1,  4,   2,   2,   2]  # strides for encoder
+  b_enc: [ 0,  3,   3,   9,   3]  # number of blocks in encoder
+  layer_scale_init_value: 0.000001
+  transformer_heads: 12
+  embed_dim: 192
+
+# TextEncoder
+text_encoder:
+  context_length: 256
+  transformer_heads: 12
+  transformer_layers: 12
+  transformer_width: 768
+  embed_dim: 192
+
+# ContentEncoder
+content_encoder:
+  c_in: 1                         # input channels
+  c_enc: [96, 192, 384]  # channels for encoder
+  k_enc: [ 7,   2,   2]  # ksize for encoder
+  s_enc: [ 1,   2,   2]  # strides for encoder
+  b_enc: [ 0,   1,   3]  # number of blocks in encoder
+  layer_scale_init_value: 0.000001
+
+# ReconDecoder
+recon_decoder:
+  c_pre: 384
+  latent_dim: 16
+  b_dec: [  3,  1,  0]  # number of blocks in decoder
+  c_dec: [192, 96,  1]  # channels for decoder
+  k_dec: [  3,  3,  7]  # ksize for decoder
+  s_dec: [  2,  2,  1]  # strides for decoder, using ConvTranspose2d if stride==2
+  layer_scale_init_value: 0.000001
+  act_last: None        # [None, leakyrelu, relu, gelu, sigmoid, tanh]
+  embed_dim: 192
+
+# discriminator
+discriminator:
+  c_in: 1
+  ndf: 96
+  n_down: 4
+  n_hyper: 4
+  latent_dim: 16
+  embed_dim: 192
+  layer_scale_init_value: 0.000001

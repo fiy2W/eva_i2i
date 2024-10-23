@@ -1,0 +1,49 @@
+dataset:
+  - brats                   # brain MR
+  - ixi                     # brain MR
+  - oasis3                  # brain MR
+  - synthrad                # brain/pelvis CT CBCT MR
+  - duke-breast-cancer-mri  # breast MR
+  - amos                    # abdomen CT MR
+  - chaos                   # abdomen CT MR
+
+prep:
+  box_percentile: 20
+  size: [256, 256, 256]
+  max_out_seq: 8
+
+synthrad:
+  image: /path/to/synthRAD2023
+  list: data_list/eva/synthRAD2023/
+  dict: data_list/eva/synthRAD2023/info.json
+
+brats:
+  image: /path/to/BraTS
+  list: data_list/eva/brats
+  dict: data_list/eva/brats/info.json
+
+duke-breast-cancer-mri:
+  image: /path/to/Duke-Breast-Cancer-MRI
+  list: data_list/eva/duke-breast-cancer-mri
+  dict: data_list/eva/duke-breast-cancer-mri/info.json
+
+chaos:
+  image: /path/to/CHAOS
+  list: data_list/eva/chaos
+  dict: data_list/eva/chaos/info.json
+
+amos:
+  image: /path/to/AMOS22
+  list: data_list/eva/amos
+  dict: data_list/eva/amos/info.json
+
+ixi:
+  image: /path/to/IXI
+  list: data_list/eva/ixi
+  dict: data_list/eva/ixi/info.json
+
+oasis3:
+  image: /path/to/OASIS3
+  image_skull_removal: /path/to/OASIS3_skull_removal
+  list: data_list/eva/oasis3
+  dict: data_list/eva/oasis3/info.json
